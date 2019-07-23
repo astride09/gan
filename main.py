@@ -13,7 +13,7 @@ def parse_args():
 
     parser.add_argument('--epoch', type=int, default=50, help='The number of epochs to run')
     parser.add_argument('--iteration', type=int, default=10000, help='The number of training iterations')
-    parser.add_argument('--batch_size', type=int, default=32, help='The size of batch per gpu')
+    parser.add_argument('--batch_size', type=int, default=4, help='The size of batch per gpu')
     parser.add_argument('--ch', type=int, default=96, help='base channel number per layer')
 
     # SAGAN
