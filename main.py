@@ -12,8 +12,8 @@ def parse_args():
     parser.add_argument('--dataset', type=str, default='celebA-HQ', help='[mnist / cifar10 / custom_dataset]')
 
     parser.add_argument('--epoch', type=int, default=50, help='The number of epochs to run')
-    parser.add_argument('--iteration', type=int, default=10000, help='The number of training iterations')
-    parser.add_argument('--batch_size', type=int, default=4, help='The size of batch per gpu')
+    parser.add_argument('--iteration', type=int, default=500, help='The number of training iterations')
+    parser.add_argument('--batch_size', type=int, default=2, help='The size of batch per gpu')
     parser.add_argument('--ch', type=int, default=96, help='base channel number per layer')
 
     # SAGAN
@@ -21,11 +21,11 @@ def parse_args():
     # base channel = 64
     # epoch = 100 (1M iterations)
 
-    parser.add_argument('--print_freq', type=int, default=1000, help='The number of image_print_freqy')
-    parser.add_argument('--save_freq', type=int, default=1000, help='The number of ckpt_save_freq')
+    parser.add_argument('--print_freq', type=int, default=100, help='The number of image_print_freqy')
+    parser.add_argument('--save_freq', type=int, default=100, help='The number of ckpt_save_freq')
 
-    parser.add_argument('--g_lr', type=float, default=0.00005, help='learning rate for generator')
-    parser.add_argument('--d_lr', type=float, default=0.0002, help='learning rate for discriminator')
+    parser.add_argument('--g_lr', type=float, default=0.0001, help='learning rate for generator')
+    parser.add_argument('--d_lr', type=float, default=0.0004, help='learning rate for discriminator')
 
     # if lower batch size
     # g_lr = 0.0001
