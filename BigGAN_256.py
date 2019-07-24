@@ -326,7 +326,7 @@ class BigGAN_256(object):
                     save_images(samples[:manifold_h * manifold_w, :, :, :],
                                 [manifold_h, manifold_w],
                                 './' + self.sample_dir + '/' + self.model_name + '_train_{:02d}_{:05d}.png'.format(
-                                    epoch, idx + 1))
+                                    epoch, idx + 1))#'/content/drive/My Drive/IMG/'
 
                 if np.mod(idx + 1, self.save_freq) == 0:
                     self.save(self.checkpoint_dir, counter)
